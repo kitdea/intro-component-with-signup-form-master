@@ -12,8 +12,10 @@ body {
   background: url(/images/bg-intro-mobile.png) hsl(0, 100%, 74%);
   background-size: cover;
   background-position: center;
-  min-height: fit-content;
-  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .bg-accent-color {
@@ -87,4 +89,30 @@ body {
   color: hsl(0, 100%, 74%);
   font-weight: 600;
   text-decoration: none;
+}
+
+@media(min-width: 768px) {
+  .intro-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+  }
+
+  .intro-box-content {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+  }
+
+  .intro-box-forms {
+    width: 50%;
+  }
+
+  .intro-container h2 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
 }
